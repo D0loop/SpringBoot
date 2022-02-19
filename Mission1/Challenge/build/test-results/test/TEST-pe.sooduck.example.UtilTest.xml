@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pe.sooduck.example.UtilTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-02-02T13:43:01" hostname="Sooducks-MacBook-Pro-16.local" time="0.041">
+  <properties/>
+  <testcase name="string_arraylist_toIterator_Test()" classname="pe.sooduck.example.UtilTest" time="0.039"/>
+  <testcase name="string_hashset_toIterator_Test()" classname="pe.sooduck.example.UtilTest" time="0.001"/>
+  <system-out><![CDATA[Item 1
+Item 2
+Item 3
+Item 4
+Item 4
+Item 3
+Item 2
+Item 1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
