@@ -1,4 +1,4 @@
-package com.example.crud.post;
+package com.example.crud.post.domain;
 
 /**
  * @author D0Loop
