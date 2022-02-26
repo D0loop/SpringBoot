@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pe.example.mybatis.mapper.PostMapper">
+    <insert id="createPost" parameterType="pe.example.mybatis.dto.PostDto">
+        INSERT INTO post(title, content, writer, boardId)
+        VALUES (#{title}, #{content}, #{writer}, ${boardId})
+    </insert>
+    <insert id="createPostAll" parameterType="pe.example.mybatis.dto.PostDto">
+        INSERT INTO post(title, content, writer, boardId)
+        VALUES <foreach collection="list" item="item" separator=", ">
+                (#{item.title}, #{item.content}, #{item.writer}, ${item.boardId})
+                </foreach>
+    </insert>
+
+    <select id="readPost" parameterType="int" resultType="pe.example.mybatis.dto.PostDto">
+        SELECT * FROM post WHERE id = ${id}
+    </select>
+
+    <select id="readPostAll" resultType="pe.example.mybatis.dto.PostDto">
+        SELECT * FROM post
+    </select>
+    <select id="readPostQuery"
+            parameterType="pe.example.mybatis.dto.PostDto"
+            resultType="pe.example.mybatis.dto.PostDto">
+        SELECT *
+        FROM   POST
+        WHERE title = #{title}
+        <if test="title != null">
+            and title = #{title}
+        </if>
+    </select>
+    <update id="updatePost" parameterType="pe.example.mybatis.dto.PostDto">
+        UPDATE post SET title = #{title}, content = #{content}, writer = #{writer}, boardId = ${boardId} WHERE id = ${id}
+    </update>
+
+    <delete id="deletePost" parameterType="int">
+        DELETE FROM post WHERE id = ${id}
+    </delete>
+</mapper>

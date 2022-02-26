@@ -20,9 +20,6 @@ import java.util.stream.Collectors;
 
 public class PostDto {
 
-    @Value("post.file.upload.path")
-    private String FILE_UPLOAD_PATH;
-
     private int id;
     private int boardId;
     private String title;
