@@ -55,5 +55,15 @@ public class PostController {
     public void deletePost(@PathVariable("id") int id) {
         this.postService.deletePost(id);
     }
-    
+
+    @GetMapping("test-log")
+    public void testLog() {
+
+        logger.trace("trace");
+        logger.debug("debug");
+        logger.info("info");
+        logger.warn("warn");
+        logger.error("error");
+
+    }
 }

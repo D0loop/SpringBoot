@@ -2,6 +2,11 @@ spring:
   profiles:
     active: local
 
+#logging:
+#  level:
+#    root: warn
+#    com.example.jpa: info
+
 custom:
   property:
     single: custom-property
@@ -10,6 +15,7 @@ custom:
       id: api-id
       key: api-key
       url: https://ncp.com/
+
 ---
 spring:
   config:

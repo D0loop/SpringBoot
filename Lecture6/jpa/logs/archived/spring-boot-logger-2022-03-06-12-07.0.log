@@ -1,0 +1,18 @@
+2022-03-06 12:07:18,487 INFO StartupInfoLogger [main] Starting JpaApplication using Java 11.0.11 on Sooducks-MBP-16 with PID 74684 (/Users/sooduck/Develop/ProjectLion/SpringBoot/Lecture6/jpa/out/production/classes started by sooduck in /Users/sooduck/Develop/ProjectLion/SpringBoot/Lecture6/jpa)
+2022-03-06 12:07:18,492 DEBUG StartupInfoLogger [main] Running with Spring Boot v2.5.10, Spring v5.3.16
+2022-03-06 12:07:18,492 INFO SpringApplication [main] The following 1 profile is active: "locallo"
+2022-03-06 12:07:20,460 INFO DemoConfig [main] customProperty: custom-property
+2022-03-06 12:07:20,461 INFO DemoConfig [main] customCommaList.toString(): [comma, sparated, list, to, value]
+2022-03-06 12:07:20,461 INFO DemoConfig [main] propertyDefault: default-property
+2022-03-06 12:07:20,476 INFO LocalMQ [main] bean local
+2022-03-06 12:07:20,741 WARN JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-06 12:07:21,028 INFO StartupInfoLogger [main] Started JpaApplication in 3.039 seconds (JVM running for 3.666)
+2022-03-06 12:07:35,120 INFO StartupInfoLogger [main] Starting JpaApplication using Java 11.0.11 on Sooducks-MBP-16 with PID 74702 (/Users/sooduck/Develop/ProjectLion/SpringBoot/Lecture6/jpa/out/production/classes started by sooduck in /Users/sooduck/Develop/ProjectLion/SpringBoot/Lecture6/jpa)
+2022-03-06 12:07:35,122 DEBUG StartupInfoLogger [main] Running with Spring Boot v2.5.10, Spring v5.3.16
+2022-03-06 12:07:35,123 INFO SpringApplication [main] The following 1 profile is active: "locallo"
+2022-03-06 12:07:36,955 INFO DemoConfig [main] customProperty: custom-property
+2022-03-06 12:07:36,956 INFO DemoConfig [main] customCommaList.toString(): [comma, sparated, list, to, value]
+2022-03-06 12:07:36,956 INFO DemoConfig [main] propertyDefault: default-property
+2022-03-06 12:07:36,972 INFO LocalMQ [main] bean local
+2022-03-06 12:07:37,254 WARN JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-06 12:07:37,546 INFO StartupInfoLogger [main] Started JpaApplication in 2.824 seconds (JVM running for 3.329)
