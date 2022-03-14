@@ -45,4 +45,13 @@
         <appender-ref ref="Console" />
     </logger>
 
+    <logger name="com.example.posting.filter" level="trace" additivity="false">
+        <!--<appender-ref ref="RollingFile" />-->
+        <appender-ref ref="Console" />
+    </logger>
+
+    <logger name="com.example.posting.interceptor" level="trace" additivity="false">
+        <!--<appender-ref ref="RollingFile" />-->
+        <appender-ref ref="Console" />
+    </logger>
 </configuration>

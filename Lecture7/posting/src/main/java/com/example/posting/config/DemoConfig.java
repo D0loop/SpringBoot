@@ -1,14 +1,12 @@
-package com.example.posting;
+package com.example.posting.config;
 
-import com.google.gson.Gson;
+import com.example.posting.interceptor.HeaderLoggingInterceptor;
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import javax.annotation.PostConstruct;
-import java.util.List;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * @author D0Loop
@@ -16,7 +14,8 @@ import java.util.List;
  */
 
 @Configuration
-public class DemoConfig {
+@RequiredArgsConstructor
+public class DemoConfig implements WebMvcConfigurer {
 
     public static final Logger logger = LoggerFactory.getLogger(DemoConfig.class);
 
@@ -41,5 +40,12 @@ public class DemoConfig {
 //        return new Gson();
 //    }
 
+    private final HeaderLoggingInterceptor headerLoggingInterceptor;
 
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(headerLoggingInterceptor)
+                .addPathPatterns("/post/**")
+                .excludePathPatterns("/except/**");
+    }
 }
