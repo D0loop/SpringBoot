@@ -7,6 +7,27 @@ spring:
 #    root: warn
 #    com.example.jpa: info
 
+management:
+  endpoints:
+    enabled-by-default: false
+    web:
+      exposure:
+        include: health, info, loggers,shutdown, prometheus
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+      show-components: always
+    info:
+      enabled: true
+    loggers:
+      enabled: true
+    shutdown:
+      enabled: true
+    prometheus:
+      enabled: true
+
+
 custom:
   property:
     single: custom-property
