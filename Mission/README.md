@@ -20,3 +20,10 @@
 ### Challenge
 ![challenge](https://github.com/D0loop/SpringBoot/blob/main/Mission/Mission3/result%20img/challenge.png)
 ![challenge-table](https://github.com/D0loop/SpringBoot/blob/main/Mission/Mission3/result%20img/challenge%20table.png)
+
+
+## Mission4
+### Basic
+![Basic](https://github.com/D0loop/SpringBoot/blob/main/Mission/Mission4/result%20img/basic_login-form.png)
+![Basic-random-area](https://github.com/D0loop/SpringBoot/blob/main/Mission/Mission4/result%20img/basic_random_area.png)
+![Basic-exception](https://github.com/D0loop/SpringBoot/blob/main/Mission/Mission4/result%20img/basic_exception.png)
