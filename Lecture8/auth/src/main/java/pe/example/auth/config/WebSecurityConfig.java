@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import pe.example.auth.infra.NaverOauth2Service;
 
 /**
  * @author D0Loop
@@ -22,6 +23,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsService userDetailsService;
+    private final NaverOauth2Service naverOauth2Service;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -50,6 +52,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginPage("/user/login")
                 .defaultSuccessUrl("/home")
                 .permitAll() // permitAll을 붙임으로써 and이후의 요구사항들이 우선 순위를 가지게 되어 antMatchers의 "/user/**"를 지워도 된다.
+            .and()
+                .oauth2Login()
+                    .userInfoEndpoint()
+                    .userService(naverOauth2Service)
+                .and()
+                    .defaultSuccessUrl("/home")
             .and()
                 .logout()
                 .logoutUrl("/user/logout")
