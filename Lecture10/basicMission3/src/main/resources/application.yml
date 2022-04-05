@@ -1,28 +1,15 @@
 spring:
-  profiles:
-    active: product
-
-#logging:
-#  level:
-#    root: warn
-#    com.example.jpa: info
-
-
----
-spring:
+  application:
+    name: community
   config:
-    activate:
-      on-profile: product
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/demo_jpa_schema
-    username: jpauser
-    password: jpauser!@#$
+    import: optional:configserver:http://root:root@localhost:8888
 
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: false
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
+#management:
+#  endpoints:
+#    enabled-by-default: false
+#    web:
+#      exposure:
+#        include: refresh
+#  endpoint:
+#    refresh:
+#      enabled: true

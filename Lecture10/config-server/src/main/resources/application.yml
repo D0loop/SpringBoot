@@ -1,0 +1,25 @@
+server:
+  port: 8888
+
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file://${user.home}/Develop/ProjectLion/SpringBoot/Lecture10/cloud-native-local
+  security:
+    user:
+      name: root
+      password: root
+
+#spring:
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/aquashdw2/spring-cloud-config.git
+#          default-label: master
+#          clone-on-start: true
+#          basedir: .config-git-remote
