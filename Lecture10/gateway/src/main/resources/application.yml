@@ -1,0 +1,32 @@
+server:
+  port: 8000
+
+
+# 설정파일을 통한 Routing
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: community-user
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/user/**
+          filters:
+            - name: RewritePath
+              args:
+                regexp: /api/(?<path>.*)
+                replacement: /$\{path}
+        - id: community-board
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/board/**
+          filters:
+            - RewritePath=/api/(?<path>.*), /$\{path}
+            - name: LogExecution
+              args:
+                simpleUid: true
+                inSeconds: true
+
+logging:
+  level:
+    pe.example.gateway.filter: trace
